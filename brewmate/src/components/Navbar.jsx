@@ -1,3 +1,4 @@
+import { Link as RouterLink } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -9,9 +10,8 @@ import {
 import LocalCafeIcon from "@mui/icons-material/LocalCafe";
 
 const menus = [
-  { label: "Beranda", href: "#" },
-  { label: "Tentang", href: "#tentang" },
-  { label: "Kontak", href: "#kontak" },
+  { label: "Beranda", to: "/" },
+  { label: "Kontak", to: "/kontak" },
 ];
 
 export default function Navbar() {
@@ -30,8 +30,8 @@ export default function Navbar() {
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
           <Box
-            component="a"
-            href="#"
+            component={RouterLink}
+            to="/"
             sx={{
               display: "flex",
               alignItems: "center",
@@ -52,7 +52,12 @@ export default function Navbar() {
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <Box sx={{ display: { xs: "none", sm: "flex" }, gap: 1 }}>
               {menus.map((m) => (
-                <Button key={m.label} href={m.href} color="inherit">
+                <Button
+                  key={m.label}
+                  component={RouterLink}
+                  to={m.to}
+                  color="inherit"
+                >
                   {m.label}
                 </Button>
               ))}
@@ -60,7 +65,8 @@ export default function Navbar() {
             <Button
               variant="contained"
               color="secondary"
-              href="#"
+              component={RouterLink}
+              to="/kontak"
               sx={{ ml: 1 }}
             >
               Get Started
