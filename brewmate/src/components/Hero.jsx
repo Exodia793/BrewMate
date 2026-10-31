@@ -4,7 +4,14 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function Hero() {
   return (
-    <Box sx={{ py: { xs: 6, md: 12 } }}>
+    <Box
+      sx={{
+        minHeight: "calc(100vh - 65px)",
+        display: "flex",
+        alignItems: "center",
+        py: { xs: 6, md: 8 },
+      }}
+    >
       <Container maxWidth="lg">
         <Box
           sx={{
@@ -16,7 +23,7 @@ export default function Hero() {
         >
           <Box sx={{ flex: 1 }}>
             <Chip
-              label="☕ Kopi langganan #1 untuk anak muda"
+              label="Kopi langganan #1 untuk anak muda"
               color="secondary"
               sx={{ mb: 3 }}
             />
