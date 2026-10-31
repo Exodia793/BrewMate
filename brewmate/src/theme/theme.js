@@ -45,23 +45,8 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: { root: { boxShadow: "none", padding: "10px 24px" } },
     },
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          borderRadius: 16,
-          boxShadow: "0 4px 16px rgba(0,0,0,0.06)",
-          transition: "transform .2s",
-          "&:hover": { transform: "translateY(-4px)" },
-        },
-      },
-    },
     MuiChip: {
       styleOverrides: { root: { fontWeight: 600 } },
-    },
-    MuiAccordion: {
-      styleOverrides: {
-        root: { boxShadow: "none", "&:before": { display: "none" } },
-      },
     },
   },
 });
