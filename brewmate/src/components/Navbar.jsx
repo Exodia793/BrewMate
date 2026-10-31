@@ -66,7 +66,7 @@ export default function Navbar() {
               variant="contained"
               color="secondary"
               component={RouterLink}
-              to="/kontak"
+              to="#"
               sx={{ ml: 1 }}
             >
               Get Started
